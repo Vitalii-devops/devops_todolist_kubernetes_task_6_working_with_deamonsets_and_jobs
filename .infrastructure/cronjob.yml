@@ -19,7 +19,7 @@ spec:
             - /bin/sh
             - -c
             - |
-              curl http://localhost:30008/api/health
+              curl http://todoapp-service:8080/api/health
             resources:
               requests:
                 cpu: 100m

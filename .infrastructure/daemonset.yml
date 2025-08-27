@@ -24,13 +24,10 @@ spec:
           limits:
             cpu: 200m
             memory: 256Mi
-        ports:
-        - containerPort: 8080
-          hostPort: 30008
         command: ["/bin/sh", "-c"]
         args:
           - |
             while true; do
-              curl http://todoapp-service; # Replace with your actual ClusterIP service name
+              curl http://todoapp-service:8080; # Replace with your actual ClusterIP service name
               sleep 5;
             done  
